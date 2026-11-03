@@ -1,0 +1,10 @@
+{
+    "items": [
+        {
+            "name": "welcome",
+            "prompt": "prompt",
+            "speech": "Welcome to the Smart Home Assessor. This tool will help guide you through the assessment process",
+            "output": ""
+        }
+    ]
+}
