@@ -1,10 +1,91 @@
 {
+    "name": "welcome",
+    "prompt": "",
+    "speech": "Welcome to the Smart Home Assessor. This tool will help guide you through the assessment process",
+    "answer": "",
+    "output": "",
     "items": [
         {
-            "name": "welcome",
-            "prompt": "prompt",
-            "speech": "Welcome to the Smart Home Assessor. This tool will help guide you through the assessment process",
-            "output": ""
+            "name": "kitchen",
+            "prompt": "Is this a kitchen?  Answer with yes or no.",
+            "repeat": true,
+            "speech": "Walk to the kitchen.",
+            "answer": "yes",
+            "output": "You are in a kitchen.",
+            "items":[
+                {
+                    "name": "kitchen_table_chairs",
+                    "prompt": "Is there a table with chairs?  Answer with yes or no.",
+                    "repeat": true,
+                    "speech": "Aim the phone towards any table with chairs.",
+                    "answer": "yes",
+                    "output": "There is a table with chairs present.",
+                    "items":[
+                        {
+                            "name": "kitchen_table_chairs_armrests",
+                            "prompt": "Do the chairs have armrests?  Answer with yes or no.",
+                            "repeat": false,
+                            "speech": "",
+                            "answer": "no",
+                            "output": "It is helpful for chairs to have arm rests at tables, to aid in getting up from them."
+                        }
+                    ]
+                },
+                {
+                    "name": "kitchen_dishwasher",
+                    "prompt": "Is there a dishwasher?  Answer with yes or no.",
+                    "repeat": true,
+                    "speech": "Aim the phone towards any dishwasher.",
+                    "answer": "yes",
+                    "output": "There is a dishwasher present."
+                },
+                {
+                    "name": "kitchen_cupboards",
+                    "prompt": "Are there cupboards present?  Answer with yes or no.",
+                    "repeat": true,
+                    "speech": "Aim the phone towards any cupboards.",
+                    "answer": "yes",
+                    "output": "There are cupboards present.",
+                    "items":[
+                        {
+                            "name": "kitchen_cupboards_height",
+                            "prompt": "AR_height_low",
+                            "repeat": false,
+                            "speech": "Aim the phone so the floor and cupboards are visible.",
+                            "output": "AR"
+                        },
+                        {
+                            "name": "kitchen_cupboards_open",
+                            "prompt": "",
+                            "speech": "Open up any upper cupboards so contents inside are visible.",
+                            "output": ""
+                        },
+                        {
+                            "name": "kitchen_cupboards_heavy",
+                            "prompt": "Are there heavy items in the cupboard? Answer with yes or no.",
+                            "repeat": true,
+                            "speech": "Aim the phone towards the inside of open cupboards.",
+                            "answer": "yes",
+                            "output": "It is better to put heavy objects in lower to reach spaces."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "living_room",
+            "prompt": "Is this a living room?  Answer with yes or no.",
+            "repeat": true,
+            "speech": "Walk to the living room",
+            "answer": "yes",
+            "output": "",
+            "items": [
+                {
+                    "name": "living_room_couch",
+                    "prompt": "",
+                    "speech": ""
+                }
+            ]
         }
     ]
 }
