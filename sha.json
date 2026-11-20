@@ -52,7 +52,9 @@
                             "prompt": "AR_height_low",
                             "repeat": false,
                             "speech": "Aim the phone so the floor and cupboards are visible.",
-                            "output": "AR"
+                            "output": "AR",
+                            "sam_query1": "floor",
+                            "sam_query2": "upper cupboard"
                         },
                         {
                             "name": "kitchen_cupboards_open",
@@ -69,6 +71,30 @@
                             "output": "It is better to put heavy objects in lower to reach spaces."
                         }
                     ]
+                },
+                {
+                    "name": "kitchen_fridge",
+                    "prompt": "Is there a fridge?  Answer with yes or no.",
+                    "repeat": true,
+                    "speech": "Aim the phone towards any fridge.",
+                    "answer": "yes",
+                    "output": "There is a fridge present.",
+                    "items": [
+                        {
+                            "name": "kitchen_fridge",
+                            "prompt": "",
+                            "speech": "Ensure that you can reach to the back of your refridgerator and freezer.",
+                            "output": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "kitchen_counters",
+                    "prompt": "Are there counters?  Answer with yes or no.",
+                    "repeat": true,
+                    "speech": "Aim the phone towards any counters.",
+                    "answer": "yes",
+                    "output": "There are counters present."
                 }
             ]
         },
@@ -84,6 +110,238 @@
                     "name": "living_room_couch",
                     "prompt": "",
                     "speech": ""
+                },
+                {
+                    "name": "living_room_cords",
+                    "prompt": "Are there cords on the floor?  Answer with yes or no.",
+                    "repeat": true,
+                    "speech": "Aim the phone towards the floor.",
+                    "answer": "yes",
+                    "output": "There are cords present, these can be a tripping hazard."
+                }
+            ]
+        },
+        {
+            "name": "bedroom",
+            "prompt": "Is this a bedroom?  Answer with yes or no.",
+            "repeat": true,
+            "speech": "Walk to the bedroom",
+            "answer": "yes",
+            "output": "",
+            "items": [
+                {
+                    "name": "bedroom_bed",
+                    "prompt": "Is this a bed?  Answer with yes or no.",
+                    "repeat": true,
+                    "speech": "Aim the phone towards the bed",
+                    "answer": "yes",
+                    "output": "",
+                    "items": [
+                        {
+                            "name": "bedroom_bed_height",
+                            "prompt": "AR_height_high",
+                            "repeat": false,
+                            "speech": "Aim the phone so the floor and bed are visible.",
+                            "output": "AR",
+                            "sam_query1": "floor",
+                            "sam_query2": "bed cover"
+                        }
+                    ]
+                },
+                {
+                    "name": "bedroom_phone",
+                    "prompt": "Can a phone exist within reach of the bed?  Answer with yes or no.",
+                    "repeat": true,
+                    "speech": "Aim the phone towards the bed and any nightstand.",
+                    "answer": "yes",
+                    "output": "There should be a spot to keep a phone near your bed."
+                },
+                {
+                    "name": "bedroom_flashlight",
+                    "prompt": "Is there a flashlight near the bed?  Answer with yes or no.",
+                    "repeat": true,
+                    "speech": "Aim the phone towards the bed and any nightstand.",
+                    "answer": "yes",
+                    "output": "It is helpful to keep a flashlight near your bed at night in case you have to get up."
+                }
+            ]
+        },
+        {
+            "name": "bathroom",
+            "prompt": "Is this a bathroom?  Answer with yes or no.",
+            "repeat": true,
+            "speech": "Walk to the batroom",
+            "answer": "yes",
+            "output": "",
+            "items": [
+                {
+                    "name": "bathroom_vanity",
+                    "prompt": "Is there a vanity in the bathroom?  Answer with yes or no.",
+                    "repeat": true,
+                    "speech": "Aim the phone towards any vanity in the bathroom.",
+                    "answer": "yes",
+                    "output": "",
+                    "items":[
+                        {
+                            "name": "bathroom_vanity_light",
+                            "prompt": "Is there sufficient light near the vanity?  Answer with yes or no.",
+                            "repeat": true,
+                            "speech": "Aim the phone towards the vanity",
+                            "answer": "yes",
+                            "output": "It is necessary to have sufficient light near your bathroom vanity"
+                        }
+                    ]
+                },
+                {
+                    "name": "bathroom_sink",
+                    "prompt": "Is there space under the sink?  Answer with yes or no.",
+                    "repeat": true,
+                    "speech": "Aim the phone towards the area under the sink.",
+                    "answer": "yes",
+                    "output": "It is important to have sufficient space under the sink."
+                },
+                {
+                    "name": "bathroom_drawers",
+                    "prompt": "Are there drawers in the bathroom?  Answer with yes or no.",
+                    "repeat": true,
+                    "speech": "Aim the phone towards any drawers near the sink.",
+                    "answer": "yes",
+                    "output": "",
+                    "items":[
+                        {
+                            "name": "bathroom_drawers_height",
+                            "prompt": "AR_height",
+                            "repeat": true,
+                            "speech": "Aim the phone so the drawers and floor are in view",
+                            "answer": "yes",
+                            "output": "AR",
+                            "sam_query1": "floor",
+                            "sam_query2": "drawers"
+                        }
+                    ]
+                },
+                {
+                    "name": "bathroom_shower",
+                    "prompt": "Is there a shower in the bathroom?  Answer with yes or no.",
+                    "repeat": true,
+                    "speech": "Aim the phone towards the any shower in the bathroom.",
+                    "answer": "yes",
+                    "output": "",
+                    "items":[
+                        {
+                            "name": "bathroom_shower_soap",
+                            "prompt": "Is there a place for soap in the shower?  Answer with yes or no.",
+                            "repeat": true,
+                            "speech": "Aim the phone towards the any shower in the bathroom.",
+                            "answer": "yes",
+                            "output": "It is important to have a dedicated space for soap in the shower."
+                        },
+                        {
+                            "name": "bathroom_towel_rack",
+                            "prompt": "Is there a towel rack near the shower?  Answer with yes or no.",
+                            "repeat": true,
+                            "speech": "Aim the phone towards the any towel holder in the bathroom.",
+                            "answer": "yes",
+                            "output": "It is important to have a towel rack near the shower."
+                        },
+                        {
+                            "name": "bathroom_shower_mat",
+                            "prompt": "Is there a non-skid shower mat on the floor outside of the shower?  Answer with yes or no.",
+                            "repeat": true,
+                            "speech": "Aim the phone towards the floor outside of the shower.",
+                            "answer": "yes",
+                            "output": "It is important to have a mat outside of the shower."
+                        }
+                    ]
+                },
+                {
+                    "name": "bathroom_floor",
+                    "prompt": "Is there water on the floor?  Answer with yes or no.",
+                    "repeat": true,
+                    "speech": "Aim the phone towards any wet spots on the floor.",
+                    "answer": "yes",
+                    "output": "It is important to keep the bathroom floor dry to prevent slipping hazards."
+                },
+                {
+                    "name": "bathroom_toilet",
+                    "prompt": "",
+                    "speech": "Lift the top toilet seat up",
+                    "items":[
+                        {
+                            "name": "bathroom_toilet_seat",
+                            "prompt": "Is the toilet seat up?  Answer with yes or no.",
+                            "repeat": true,
+                            "speech": "Aim the phone towards the toilet.",
+                            "answer": "yes",
+                            "output": "The toilet seat needs to be up before measuring its height",
+                            "items":[
+                                {
+                                    "name": "bathroom_toilet_height",
+                                    "prompt": "AR_height_min",
+                                    "repeat": true,
+                                    "speech": "Aim the phone so the toilet and floor are in view",
+                                    "answer": "yes",
+                                    "output": "AR",
+                                    "sam_query1": "floor",
+                                    "sam_query2": "toilet seat"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "bathroom_grab_bars",
+                            "prompt": "Are there grab bars near the toilet?  Answer with yes or no.",
+                            "repeat": true,
+                            "speech": "Aim the phone towards the toilet.",
+                            "answer": "yes",
+                            "output": "It is important to have grab bars near the toilet to assist in getting on and off."
+                        }
+                    ]
+                },
+                {
+                    "name": "bathroom_lit_pathway",
+                    "prompt": "Is there lit pathway to the bathroom?  Answer with yes or no.",
+                    "repeat": true,
+                    "speech": "Walk from the bedroom to bathroom.",
+                    "answer": "yes",
+                    "output": "It is important to have a lit route from the bedroom to the bathroom."
+                }
+            ]
+        },
+        {
+            "name": "closet",
+            "prompt": "Is this a closet?  Answer with yes or no.",
+            "repeat": true,
+            "speech": "Walk to the closet.",
+            "answer": "yes",
+            "output": "You are in a closet.",
+            "items":[
+                {
+                    "name": "closet_shelf",
+                    "prompt": "Is there a shelf in the closet?  Answer with yes or no.",
+                    "repeat": true,
+                    "speech": "Aim the phone in the closet after opening its door.",
+                    "answer": "yes",
+                    "output": "",
+                    "items":[
+                        {
+                            "name": "closet_shelf_height",
+                            "prompt": "AR_height",
+                            "repeat": true,
+                            "speech": "Aim the phone so the floor and closet shelf are visible.",
+                            "answer": "yes",
+                            "output": "AR",
+                            "sam_query1": "floor",
+                            "sam_query2": "shelf"
+                        }
+                    ]   
+                },
+                {
+                    "name": "closet_stuff",
+                    "prompt": "Are there objects on the floor of the closet?  Answer with yes or no.",
+                    "repeat": true,
+                    "speech": "Aim the phone in the closet after opening its door.",
+                    "answer": "yes",
+                    "output": "It is best to keep items off of the floor of a closet"
                 }
             ]
         }
