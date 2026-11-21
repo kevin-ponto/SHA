@@ -108,8 +108,23 @@
             "items": [
                 {
                     "name": "living_room_couch",
-                    "prompt": "",
-                    "speech": ""
+                    "prompt": "Is there a couch? Answer with yes or no",
+                    "repeat": true,
+                    "speech": "Aim the phone towards any couch.",
+                    "answer": "yes",
+                    "output": "",
+                    "items":[
+                        {
+                            "name": "living_room_couch_height",
+                            "prompt": "AR_height_high",
+                            "repeat": false,
+                            "speech": "Aim the phone so the floor and couch is visible.",
+                            "answer": "yes",
+                            "output": "AR",
+                            "sam_query1": "floor",
+                            "sam_query2": "couch cushion"
+                        }
+                    ]
                 },
                 {
                     "name": "living_room_cords",
@@ -211,7 +226,7 @@
                         {
                             "name": "bathroom_drawers_height",
                             "prompt": "AR_height",
-                            "repeat": true,
+                            "repeat": false,
                             "speech": "Aim the phone so the drawers and floor are in view",
                             "answer": "yes",
                             "output": "AR",
@@ -277,8 +292,8 @@
                             "items":[
                                 {
                                     "name": "bathroom_toilet_height",
-                                    "prompt": "AR_height_min",
-                                    "repeat": true,
+                                    "prompt": "AR_height_low",
+                                    "repeat": false,
                                     "speech": "Aim the phone so the toilet and floor are in view",
                                     "answer": "yes",
                                     "output": "AR",
@@ -326,7 +341,7 @@
                         {
                             "name": "closet_shelf_height",
                             "prompt": "AR_height",
-                            "repeat": true,
+                            "repeat": false,
                             "speech": "Aim the phone so the floor and closet shelf are visible.",
                             "answer": "yes",
                             "output": "AR",
